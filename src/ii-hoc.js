@@ -22,7 +22,7 @@ function getDisplayName(WrappedComponent) {
     return WrappedComponent.displayName ||
             WrappedComponent.name ||
             'Component'
-}
+}//获取函数的name属性
 const hijackRenderHoc = config => WrappedComponent => class add extends WrappedComponent {
     static displayName = `HOC(${getDisplayName(WrappedComponent)})`;
     render() {
